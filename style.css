@@ -206,3 +206,14 @@ i {
 .svgObject:hover path {
   fill: #5865f2;
 }
+
+.disclaimer {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: small;
+}
+.disclaimer h1 {
+  font-weight: bold;
+  font-size: medium;
+}
