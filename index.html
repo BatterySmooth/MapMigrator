@@ -13,7 +13,11 @@
   <div class="root">
 
     <div class="flex-item header container br">
-      <h1 class="fw-light text-white m-0">Map Migrator</h1>
+      <h1 class="fw-light text-white m-0">Timberborn Map Migrator</h1>
+    </div>
+
+    <div class="flex-item description container br">
+      <h1 class="fw-light text-white m-0">Upload your Update 5 world, get an Update 6 compatible world save in return!</h1>
     </div>
 
     <div class="flex-item fileselect">
@@ -104,6 +108,9 @@
       worldJSON.Singletons.WaterMapNew = waterMapNew;
 
       modifiedContent = JSON.stringify(worldJSON);
+      // console.log("Processed File");
+      // console.log(fileContent);
+      // console.log(modifiedContent);
 
       return modifiedContent;
     }
