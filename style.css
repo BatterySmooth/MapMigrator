@@ -49,6 +49,7 @@ table {
 html, body {
   font-family: sans-serif;
   color: rgb(206, 206, 206);
+  overflow: hidden;
 
   background-image: url("./img/default-thumbnail.png");
   background-size: cover;
@@ -110,14 +111,20 @@ html, body {
   gap: 1rem;
   padding: 1rem;
   position: relative;
+  max-width: 95vw;
+}
+
+.logo {
+  max-width: 95vw;
 }
 
 .banner {
   position: absolute;
+  transform-origin: center;
   width: 50%;
   height: auto;
-  right: -200px;
-  top: -100px;
+  right: -100px;
+  top: -50%;
 }
 
 .inputfile {
