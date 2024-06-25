@@ -76,38 +76,44 @@
       fileInput.addEventListener('change', async function (event) {
         if (event.target.files.length > 0) {
           const file = event.target.files[0];
-          const fileName = file.name;
-          JSZip.loadAsync(file)
-            .then(zip => {
-              // Find the file
-              let foundFile = false;
-              zip.forEach(function (relativePath, zipEntry) {
-                // Check if the entry matches the file you're interested in
-                if (relativePath === "world.json") {
-                  foundFile = true; // Mark that we've found the file
-                  zipEntry.async('string').then(function (fileContent) {
-                    // Process file content
-                    const modifiedContent = processFile(fileContent);
+          const fileName = file.name.split('.').slice(0, -1).join('.');
+          console.log(fileName);
+          if (file.name.endsWith('.timber')) {
+            JSZip.loadAsync(file)
+              .then(zip => {
+                // Find the file
+                let foundFile = false;
+                zip.forEach(function (relativePath, zipEntry) {
+                  // Check if the entry matches the file you're interested in
+                  if (relativePath === "world.json") {
+                    foundFile = true; // Mark that we've found the file
+                    zipEntry.async('string').then(function (fileContent) {
+                      // Process file content
+                      const modifiedContent = processFile(fileContent);
 
-                    // Write the modified output to a new blob file
-                    zip.generateAsync({ type: 'blob' }).then(function (content) {
-                      // Create a link element and simulate click to download
-                      var blob = content;
-                      var link = document.createElement('a');
-                      link.href = window.URL.createObjectURL(blob);
-                      link.download = `${fileName}-U6.timber`;
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
+                      // Write the modified output to a new blob file
+                      zip.generateAsync({ type: 'blob' }).then(function (content) {
+                        // Create a link element and simulate click to download
+                        var blob = content;
+                        var link = document.createElement('a');
+                        link.href = window.URL.createObjectURL(blob);
+                        link.download = `${fileName}-U6.timber`;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      });
                     });
-                  });
-                }
-              });
+                  }
+                });
 
-            })
-            .catch(err => {
-              handleError(err, "Error loading zip file");
-            });
+              })
+              .catch(err => {
+                handleError(err, "Error loading zip file");
+              });
+          }
+          else {
+            handleError("The file supplied was not of the correct file type. Please select a .timber file", "Incorrect File Type");
+          }
         }
       });
     }
