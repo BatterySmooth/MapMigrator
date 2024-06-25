@@ -31,9 +31,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-/* ol, ul {
-	list-style: none;
-} */
 blockquote, q {
 	quotes: none;
 }
@@ -47,9 +44,7 @@ table {
 	border-spacing: 0;
 }
 
-
 /* Post-reset */
-
 
 html, body {
   font-family: sans-serif;
@@ -64,36 +59,18 @@ html, body {
 }
 
 .root {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5rem;
   height: 100vh;
-  
   background-image: url("./img/bg_main.png");
   background-size: 100% auto;
   -ms-background-size: 100% auto;
   -o-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -webkit-background-size: 100% auto;
-
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-	/* background-size: 400% 400%; */
-	/* animation: gradient 15s ease infinite; */
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }
 
 .sub-flex {
@@ -110,7 +87,6 @@ html, body {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
 }
 
 .menu-pane {
@@ -119,18 +95,12 @@ html, body {
   border-width: 20px;
   border-image-slice: 47 fill;
   border-image-repeat: stretch;
-
   padding: 1rem;
 }
 
 .container {
-  /* background-color: rgba(0, 0, 0, 0.3); */
   padding: 1rem;
 }
-
-/* .header > h1 {
-  font-size: 5rem;
-} */
 
 .header {
   display: flex;
