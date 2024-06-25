@@ -12,18 +12,47 @@
 <body>
   <div class="root">
 
-    <div class="flex-item header container br">
-      <h1 class="fw-light text-white m-0">Timberborn Map Migrator</h1>
+    <div class="flex-item header">
+      <img src="/img/logo.png" alt="Timberborn Logo" class="logo">
+      <img src="/img/banner.png" alt="Name Banner" class="banner">
+      <!-- <h1 class="fw-light text-white m-0">Map Migrator</h1> -->
     </div>
 
-    <div class="flex-item description container br">
-      <h1 class="fw-light text-white m-0">Upload your Update 5 world, get an Update 6 compatible world save in return!</h1>
+    <div class="flex-item sub-flex menu-pane">
+
+      <div class="flex-item description container">
+        <h1 class="bold">Convert your Update 5 save into an Update 6 save</h1>
+        <ul class="list">
+          <li>Select the button below to open the file picker</li>
+          <li>Navigate to your Timberborn save game location</li>
+          <li>Select the save game file you wish to convert</li>
+          <li>Once the conversion is done, the converted file will download</li>
+          <li>Find the location that you want to move this save to<br><i>You will likely need to create a new folder
+              inside the save location to add a new colony</i></li>
+          <li>Cut and paste this downloaded .timber file inside the new colony's folder</li>
+          <li>Launch the game and enjoy!</li>
+        </ul>
+      </div>
+
+      <div class="flex-item fileselect">
+        <input type="file" name="file" id="file" class="inputfile" accept=".timber">
+        <label for="file" class="button">Choose a file</label>
+      </div>
+
+      <div class="flex-item container">
+        <p>If you have any issues, feel free to get in touch on Discord:</p>
+        <a href="https://discordapp.com/channels/@me/394895775378833408/">
+          <svg class="svgObject" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
+            <path fill="#fff" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
+          </svg>
+        </a>
+      </div>
+
+
+
     </div>
 
-    <div class="flex-item fileselect">
-      <input type="file" name="file" id="file" class="inputfile" accept=".timber">
-      <label for="file" class="br">Choose a file</label>
-    </div>
+
 
   </div>
 
