@@ -67,11 +67,11 @@ html, body {
   gap: 5rem;
   min-height: 100vh;
   background-image: url("./img/bg_main.png");
-  background-size: 100% auto;
-  -ms-background-size: 100% auto;
-  -o-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  -webkit-background-size: 100% auto;
+  background-size: 100% 100%;
+  -ms-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
 }
 
 .sub-flex {
