@@ -47,7 +47,7 @@ table {
 /* Post-reset */
 
 html, body {
-  font-family: sans-serif;
+  font-family: 'NotoSans', sans-serif;
   color: rgb(206, 206, 206);
   overflow-x: hidden;
 
