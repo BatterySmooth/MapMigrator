@@ -10,6 +10,10 @@
 </head>
 
 <body>
+  <div class="loader-div" id="loader-div">
+    <span class="loader"></span>
+  </div>
+
   <div class="root">
 
     <div class="flex-item header">
@@ -57,7 +61,6 @@
     <h1>Disclaimer:</h1>
     <p>This tool is not associated with Mechanistry or the development team of Timberborn</p>
   </div>
-
 
   <script>
     // Read a file as text async
@@ -150,6 +153,14 @@
 
     // Initialize the file picker handler
     window.addEventListener('DOMContentLoaded', handleFileSelection);
+    // Handle the load cover
+    // Yes, I know it's not a real loader, I just hated looking at the images load in
+    window.addEventListener('DOMContentLoaded', () => {
+      const element = document.getElementById("loader-div");
+      element.addEventListener('animationend', () => {
+        myDiv.parentElement.removeChild(myDiv);
+      });
+    });
   </script>
 
 </body>
