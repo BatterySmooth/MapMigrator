@@ -10,10 +10,6 @@
 </head>
 
 <body>
-  <div class="loader-div" id="loader-div">
-    <span class="loader"></span>
-  </div>
-
   <div class="root">
 
     <div class="flex-item header">
@@ -153,14 +149,6 @@
 
     // Initialize the file picker handler
     window.addEventListener('DOMContentLoaded', handleFileSelection);
-    // Handle the load cover
-    // Yes, I know it's not a real loader, I just hated looking at the images load in
-    window.addEventListener('DOMContentLoaded', () => {
-      const element = document.getElementById("loader-div");
-      element.addEventListener('animationend', () => {
-        myDiv.parentElement.removeChild(myDiv);
-      });
-    });
   </script>
 
 </body>
